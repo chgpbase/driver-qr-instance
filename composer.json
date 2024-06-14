@@ -1,0 +1,53 @@
+{
+    "name": "chgpbase/driver-qr-instance",
+    "license": "MIT",
+    "description": "TelegramQR, WhatsappQR driver for BotMan",
+    "keywords": [
+        "Bot",
+        "BotMan",
+        "TelegramQR", "WhatsappQR"
+    ],
+    "homepage": "http://github.com/chgpbase/driver-qr-instance",
+    "authors": [{
+        "name": "Ilya Bborov",
+        "email": "chgpbase@gmail.com"
+    }],
+    "require": {
+        "php": ">=7.0",
+        "botman/botman": ">=2.0"
+    },
+    "require-dev": {
+        "botman/studio-addons": "~1.0",
+        "illuminate/support": "~5.5.0",
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "^1.1",
+        "botman/driver-facebook": "~2.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "BotMan\\Drivers\\QRInstance\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "cs": "php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "BotMan\\Drivers\\QRInstance\\Providers\\QRInstanceServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
